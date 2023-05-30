@@ -7,7 +7,6 @@ const Navbar = () => {
     <div className='navbar flex justify-between md:px-48 md:py-8 bg-white'>
         <div className='brand'>
             <img src={logo} className='w-48'></img>
-            {/* <h1 className=''>Halima Illustrations</h1> */}
         </div>
         <div className='links flex items-center font-headerFont'>
             <ul className='flex gap-3 items-center'>
