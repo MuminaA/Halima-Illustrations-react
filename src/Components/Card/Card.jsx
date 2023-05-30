@@ -10,9 +10,9 @@ const Card = ({ item }) => {
       {item.isNew ? <span className="absolute bg-white font-bold text-orange-500 px-2 m-2">New</span> : ''}
         <img src={item.img}></img>
       </div>
-      <h2 className="text-lg pt-2">{item.title}</h2>
+      <h2 className="text-lg pt-2 font-headerFont">{item.title}</h2>
       <div>
-        <h3 className="font-bold">${item.price}</h3>
+        <h3 className="font-bold font-headerFont">${item.price}</h3>
       </div>
       </div>
     </Link>
