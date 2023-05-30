@@ -9,6 +9,9 @@ module.exports = {
       },
       backgroundImage: {
         'heroImg': ['url(./assets/Poster.png)']
+      },
+      flex: {
+        '3': '3 3 0%'
       }
     },
   },

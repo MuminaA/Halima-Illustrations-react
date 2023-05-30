@@ -11,9 +11,7 @@ const Calltoaction = () => {
       <div className="flex flex-col gap-5">
         <h2 className="text-4xl font-bold text-[#1F2937] font-headerFont">Custom Painting</h2>
         <p className="font-bodyFont text-sm text-[#4B5563]">
-          Style your home with an amazing unique piece 
-          or buy already made
-          pieces.
+          Style your home with an amazing unique piece.
         </p>
         <button className="font-headerFont bg-[#111827] text-white pl-5 pr-10 py-5 max-w-[10rem] flex justify-between">Contact<EastRoundedIcon/></button>
       </div>
