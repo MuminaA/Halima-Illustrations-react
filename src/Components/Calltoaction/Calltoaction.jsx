@@ -13,7 +13,7 @@ const Calltoaction = () => {
         <p className="font-bodyFont text-sm text-[#4B5563]">
           Style your home with an amazing unique piece.
         </p>
-        <button className="font-headerFont bg-[#111827] text-white pl-5 pr-10 py-5 max-w-[10rem] flex justify-between">Contact<EastRoundedIcon/></button>
+        <button className="font-headerFont bg-[#111827] text-white pl-5 pr-10 py-5 max-w-[10rem] flex justify-between hover:translate-x-6 transition-transform duration-300">Contact<EastRoundedIcon/></button>
       </div>
       <div className="flex gap-5">
         <div className="w-96 flex">

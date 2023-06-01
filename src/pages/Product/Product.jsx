@@ -20,8 +20,8 @@ const Product = () => {
           <img src={images[0]} alt="" onClick={() => setSelectedImg(0)} />
           <img src={images[1]} alt="" onClick={() => setSelectedImg(1)} />
         </div>
-        <div className="mainImg">
-          <img src={images[selectedImg]} alt="" />
+        <div className="mainImg w-[500px]">
+          <img src={images[selectedImg]} alt="" className=" h-[800px] object-cover"/>
         </div>
       </div>
       <div className="right font-headerFont flex flex-col gap-6">
@@ -57,7 +57,7 @@ const Product = () => {
           </button>
         </div>
 
-        <div className="flex gap-2 text-[#287afec2]">
+        <div className="flex gap-2 text-[#287afec2] cursor-pointer">
           <FavoriteBorderIcon />
           Add to wishlist
         </div>

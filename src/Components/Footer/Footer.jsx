@@ -3,7 +3,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 
 const Footer = () => (
   <div className="flex flex-col gap-12 bg-black text-white px-48 pt-20 pb-7">
-    <div className="flex justify-between">
+    <div className="flex justify-center gap-72">
       <div>
         <h2 className="text-lg font-bold pb-2">Need help?</h2>
         <ul className="text-gray-400 flex flex-col gap-3">
