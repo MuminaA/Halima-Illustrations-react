@@ -15,15 +15,15 @@ const Footer = () => (
       <div>
         <h2 className="text-lg font-bold pb-2">Get in touch</h2>
         <ul className="text-gray-400 flex flex-col gap-3">
-          <li><a href="">contact@example.com</a></li>
-          <li><a href="">0123-456-7890</a></li>
+          <li><a href="mailto:email@echoecho.com">contact@example.com</a></li>
+          {/* <li><a href="">0123-456-7890</a></li> */}
         </ul>
       </div>
       <div>
         <h2 className="text-lg font-bold pb-2">Follow</h2>
         <ul className="text-gray-400 flex flex-col gap-3">
           <li>
-            <a href=""><InstagramIcon /></a>
+            <a href="https://www.instagram.com/halima_illustrations/" target="_blank"><InstagramIcon /></a>
           </li>
         </ul>
       </div>

@@ -2,18 +2,24 @@ import React from "react";
 import intDesign1 from "../../assets/intDesign1.jpg";
 import intDesign2 from "../../assets/intDesign2.jpg";
 import intDesign3 from "../../assets/intDesign3.jpg";
-import EastRoundedIcon from '@mui/icons-material/EastRounded';
+import EastRoundedIcon from "@mui/icons-material/EastRounded";
 import { Link } from "react-router-dom";
 
 const Calltoaction = () => {
   return (
     <div className="flex justify-between px-48 py-16 items-center bg-gray-100">
       <div className="flex flex-col gap-5">
-        <h2 className="text-4xl font-bold text-[#1F2937] font-headerFont">Custom Painting</h2>
+        <h2 className="text-4xl font-bold text-[#1F2937] font-headerFont">
+          Custom Painting
+        </h2>
         <p className="font-bodyFont text-sm text-[#4B5563]">
           Style your home with an amazing unique piece.
         </p>
-        <button className="font-headerFont bg-[#111827] text-white pl-5 pr-10 py-5 max-w-[10rem] flex justify-between hover:translate-x-6 transition-transform duration-300">Contact<EastRoundedIcon/></button>
+        <a href="mailto:email@echoecho.com">
+        <button className="font-headerFont bg-[#111827] text-white pl-5 pr-10 py-5 max-w-[10rem] flex gap-2 hover:translate-x-6 transition-transform duration-300">
+          Contact
+          <EastRoundedIcon />
+        </button></a>
       </div>
       <div className="flex gap-5">
         <div className="w-96 flex">

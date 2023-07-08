@@ -1,43 +1,26 @@
 import React from "react";
 import Card from "../Card/Card";
-import Frame1 from '../../assets/Frame1.png';
-import Frame3 from '../../assets/Frame3.png';
-import Frame4 from '../../assets/Frame4.png';
+import useFetch from "../../hooks/useFetch";
 
-const FeaturedProducts = () => {
-  // fake data
-  const data = [
-    {
-        id:1,
-        img: Frame1,
-        title: 'Women in a white dress',
-        isNew: true,
-        price: 12,
-    },
-    {
-        id:2,
-        img: Frame3,
-        title: 'Hijabi burgendy',
-        isNew: false,
-        price: 8,
-    },
-    {
-        id:3,
-        img: Frame4,
-        title: 'Abstract flower',
-        isNew: false,
-        price: 12,
-    },
-  ]
+const FeaturedProducts = ({ type }) => {
+  const { data, loading, error } = useFetch(
+    `/products?populate=*&[filters][type][$eq]=${type}`
+  );
+
+  // console.log("Data:", data);
 
   return (
     <div className="flex flex-col justify-center items-center py-40 px-48">
-      <h2 className="text-2xl font-bold font-headerFont pb-10">Featured Products</h2>
-      <div className="flex gap-6">
-      {/*maping over the data to fill in card component */}
-      {data.map(item => (
-        <Card item={item} key={item.id}/>
-      ))}
+      <h2 className="text-2xl font-bold font-headerFont pb-10 capitalize">
+        {type} products
+      </h2>
+      <div className="flex gap-6 capitalize">
+        {/*maping over the data to fill in card component */}
+        {error
+          ? "Something went wrong!"
+          : loading
+          ? "loading"
+          : data?.map((item) => <Card item={item} key={item.id} />)}
       </div>
     </div>
   );

@@ -7,18 +7,32 @@ const Card = ({ item }) => {
     <Link className="link" to={`/product/${item.id}`}>
       <div className="card">
         <div className="image">
-          {item.isNew ? (
+          {item.attributes.isNew ? (
             <span className="absolute bg-white font-bold text-orange-500 px-2 m-2">
               New
             </span>
           ) : (
             ""
           )}
-          <img src={item.img} className="w-[350px]"></img>
+          {/* setting the img from the data,
+            question marks are for if the data dosent have an image */}
+          <img
+            src={
+              process.env.REACT_APP_UPLOAD_URL +
+              item.attributes?.img?.data?.attributes.url
+            }
+            className="w-[350px]"
+          ></img>
         </div>
-        <h2 className="text-lg pt-2 font-headerFont">{item.title}</h2>
-        <div>
-          <h3 className="font-bold font-headerFont">${item.price}</h3>
+        <div className="flex justify-between items-center mt-3">
+          <h2 className="text-lg font-headerFont">
+            {item.attributes.title}
+          </h2>
+          <div>
+            <h3 className="font-headerFont text-red-600">
+              ${item.attributes.price.toFixed(2)}
+            </h3>
+          </div>
         </div>
       </div>
     </Link>
